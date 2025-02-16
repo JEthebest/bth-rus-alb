@@ -6,8 +6,8 @@
     { "src": "*.js", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/valentine.js", "dest": "/valentine.js" },
-    { "src": "/valentine.css", "dest": "/valentine.css" },
+    { "src": "/birthday.js", "dest": "/birthday.js" },
+    { "src": "/birthday.css", "dest": "/birthday.css" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
