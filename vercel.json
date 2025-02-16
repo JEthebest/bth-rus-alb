@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.css", "use": "@vercel/static" },
+    { "src": "*.js", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/valentine.js", "dest": "/valentine.js" },
+    { "src": "/valentine.css", "dest": "/valentine.css" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

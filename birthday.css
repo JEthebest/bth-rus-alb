@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --neon-text-color: #f40;
+    --neon-border-color: #08f;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, #ff0000 0%, #00ff00 50%, #0000ff 100%);
+    opacity: 0.1;
+    pointer-events: none;
+    animation: backgroundNoise 5s linear infinite;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.message {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--neon-border-color);
+    box-shadow: 0 0 20px var(--neon-border-color);
+    text-align: center;
+    animation: glowPulse 2s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.message::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 255, 255, 0.1) 10px,
+        rgba(0, 255, 255, 0.1) 20px
+    );
+    animation: backgroundScroll 20s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Текстовые эффекты */
+.glitch-text {
+    color: #fff;
+    text-shadow: 
+        2px 2px #ff0000,
+        -2px -2px #00ff00;
+    animation: glitchText 0.5s infinite;
+}
+
+.rainbow-text {
+    background: linear-gradient(
+        to right,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8f00ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 2s linear infinite;
+}
+
+.matrix-text {
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+    font-family: monospace;
+}
+
+.fire-text {
+    color: #fff;
+    text-shadow: 
+        0 -1px 4px #FFF,
+        0 -2px 10px #ff0,
+        0 -10px 20px #ff8000,
+        0 -18px 40px #F00;
+    animation: flame 0.5s infinite;
+}
+
+/* Кнопки */
+button {
+    background: #000;
+    color: var(--neon-text-color);
+    border: 2px solid var(--neon-text-color);
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.3s;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    background: var(--neon-text-color);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-text-color);
+    transform: scale(1.1);
+}
+
+/* Специальные элементы */
+.warning-tape {
+    background: repeating-linear-gradient(
+        45deg,
+        #000,
+        #000 10px,
+        #ff0 10px,
+        #ff0 20px
+    );
+    color: #000;
+    padding: 10px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: none;
+    animation: warningBlink 0.5s infinite;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: var(--neon-text-color);
+    animation: loading 3s infinite;
+}
+
+.manual {
+    border: 2px dashed var(--neon-text-color);
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.crazy-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.crazy-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skew(-5deg);
+    transition: 0.3s;
+}
+
+.crazy-list li:hover {
+    transform: skew(5deg) scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.final-animation {
+    position: relative;
+    height: 200px;
+}
+
+.cake-glitch {
+    font-size: 5em;
+    animation: cakeGlitch 1s infinite;
+}
+
+.spiral-text {
+    animation: spiral 4s linear infinite;
+}
+
+/* Анимации */
+@keyframes glitchText {
+    0% { transform: translate(2px, 2px); }
+    25% { transform: translate(-2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, -2px); }
+    100% { transform: translate(2px, 2px); }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes flame {
+    0%, 100% { text-shadow: 0 0 10px #FFF, 0 0 20px #ff0, 0 0 30px #ff8000; }
+    50% { text-shadow: 0 0 20px #FFF, 0 0 40px #ff0, 0 0 60px #ff8000; }
+}
+
+@keyframes loading {
+    0% { width: 0%; background: #f00; }
+    50% { width: 50%; background: #ff0; }
+    100% { width: 100%; background: #0f0; }
+}
+
+@keyframes warningBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes backgroundNoise {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+@keyframes backgroundScroll {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+@keyframes cakeGlitch {
+    0% { 
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+    50% { 
+        transform: scale(1.2) skew(10deg);
+        filter: hue-rotate(180deg);
+    }
+    100% { 
+        transform: scale(1);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes spiral {
+    from { 
+        transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+
+/* Дополнительные стили */
+.code-text {
+    font-family: monospace;
+    text-align: left;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.code-text::before {
+    content: '> _';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: #0f0;
+    animation: blink 1s infinite;
+}
+
+.hack-text {
+    color: #0f0;
+    font-family: monospace;
+    display: block;
+    margin: 20px 0;
+    animation: typing 3s steps(30) infinite;
+}
+
+.glitch-item {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.glitch-item:hover {
+    animation: itemGlitch 0.3s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes itemGlitch {
+    0% { transform: translate(0) skew(0deg); }
+    20% { transform: translate(-2px) skew(10deg); }
+    40% { transform: translate(2px) skew(-10deg); }
+    60% { transform: translate(-2px) skew(10deg); }
+    80% { transform: translate(2px) skew(-10deg); }
+    100% { transform: translate(0) skew(0deg); }
+}
+
+.confetti-madness {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
