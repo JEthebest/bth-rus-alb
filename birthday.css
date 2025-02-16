@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
     --neon-text-color: #f40;
@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     background: #000;
     min-height: 100vh;
     display: flex;
@@ -21,9 +21,10 @@ body {
     color: #fff;
     overflow: hidden;
     position: relative;
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    font-size: clamp(1rem, 3vw, 1.2rem);
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    font-weight: 400;
 }
 
 body::before {
@@ -137,7 +138,7 @@ button {
     position: relative;
     overflow: hidden;
     text-transform: uppercase;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     transition: all 0.3s;
 }
 
