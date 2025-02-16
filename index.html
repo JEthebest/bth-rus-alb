@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>*ЦЕНЗУРА* 18 лет!</title>
+    <link rel="stylesheet" href="./birthday.css">
+</head>
+<body>
+    <div class="container">
+        <div class="message" id="message1">
+            <h1 class="glitch-text">ВНИМАНИЕ БЛ*ТЬ!</h1>
+            <p>ОБНАРУЖЕН ПРИЗНАК ЖИЗНИ В СВОИ 18 ЛЕТ! 🤖</p>
+            <div class="warning-tape">⚠️ НАЖМИ ЕСЛИ НЕ ССЫКЛО ⚠️</div>
+            <button onclick="nextMessage()" class="cyber-button">ЗАПУСТИТЬ ПРОТОКОЛ →</button>
+        </div>
+        
+        <div class="message hidden" id="message2">
+            <h1 class="rainbow-text">СИСТЕМНАЯ ОШИБКА!</h1>
+            <p>*СБОЙ В МАТРИЦЕ* - обнаружен долбо*б, доживший до 18-ти! 🤯</p>
+            <button onclick="nextMessage()" class="toxic-button">ВЫЯВИТЬ ПРИЧИНУ →</button>
+        </div>
+
+        <div class="message hidden" id="message3">
+            <h1 class="fire-text">АНАЛИЗ ЗАВЕРШЁН</h1>
+            <p>Поздравляем! Вы официально получили премию Дарвина за:</p>
+            <div class="achievement">🏆 ВЫЖИВАНИЕ В ЭТОМ ДУРДОМЕ 18 ЛЕТ! 🏆</div>
+            <button onclick="nextMessage()" class="neon-button">ОХРЕНЕТЬ! А ДАЛЬШЕ? →</button>
+        </div>
+
+        <div class="message hidden" id="message4">
+            <h1 class="matrix-text">[ДАННЫЕ УДАЛЕНЫ]</h1>
+            <p>Загрузка привилегий совершеннолетия...</p>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+            <p class="small-text">*Нихрена не загружается, но ты делай вид, что всё по плану</p>
+            <button onclick="nextMessage()" class="glitch-button">ЗАГРУЗИТЬ ХАОС →</button>
+        </div>
+
+        <div class="message hidden" id="message5">
+            <h1 class="toxic-text">ИНСТРУКЦИЯ ПО ПРИМЕНЕНИЮ:</h1>
+            <div class="manual">
+                <p>КАК ПРОЖИТЬ ЕЩЁ 18 ЛЕТ:</p>
+                <ol class="crazy-list">
+                    <li>Не сдохни ✌️</li>
+                    <li>Иди нах*й от проблем 🏃‍♂️</li>
+                    <li>Повтори пункт 1 🔄</li>
+                </ol>
+            </div>
+            <button onclick="nextMessage()" class="radioactive-button">ПРИНЯТО, БРАТАН! →</button>
+        </div>
+
+        <div class="message hidden" id="message6">
+            <h1 class="error-text">FATAL ERROR:</h1>
+            <p class="code-text">
+                try {<br>
+                &nbsp;&nbsp;birthday.wish(18);<br>
+                } catch (error) {<br>
+                &nbsp;&nbsp;// Всё пошло по пи*де, но так и задумано 😎<br>
+                }
+            </p>
+            <div class="wish-list">
+                <span class="hack-text">[ВЗЛОМ ЖЕЛАНИЙ АКТИВИРОВАН]</span>
+                <ul>
+                    <li class="glitch-item">Бабла как у Илона Маска (ну или хотя бы на шаву) 💸</li>
+                    <li class="glitch-item">Чтоб всё было за*бись, а что не за*бись - то по*уй 😎</li>
+                    <li class="glitch-item">Здоровья как у таракана после ядерной войны 💪</li>
+                    <li class="glitch-item">Чтоб удача была такая, что даже враги завидуют 🎯</li>
+                </ul>
+            </div>
+            <button onclick="nextMessage()" class="matrix-button">ЗАПУСТИТЬ ВИРУС СЧАСТЬЯ →</button>
+        </div>
+
+        <div class="message hidden" id="final">
+            <h1 class="mega-glitch">С ДНЁМ РОЖДЕНИЯ, ЕПТА!</h1>
+            <div class="final-animation">
+                <div class="cake-glitch">🎂</div>
+                <div class="spiral-text">ТЫ ТЕПЕРЬ ОФИЦИАЛЬНО СТАРЫЙ ПЕНЬ</div>
+            </div>
+            <p class="final-text">Error 404: Детство не найдено</p>
+            <div class="chaos-zone">
+                <div class="confetti-madness">🔥💥⚡️✨</div>
+            </div>
+            <button onclick="restart()" class="reset-button">ПЕРЕЗАГРУЗИТЬ ПОЗДРАВЛЕНИЕ.EXE</button>
+        </div>
+    </div>
+    <script src="./birthday.js"></script>
+</body>
+</html>
